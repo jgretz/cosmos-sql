@@ -15,7 +15,7 @@ const DEFAULT_CONFIG = {
 export default async config => {
   const cosmosConfig = {
     ...DEFAULT_CONFIG,
-    config,
+    ...config,
   };
 
   const client = new DocumentClient(cosmosConfig.uri, {'masterKey': cosmosConfig.primaryKey});
