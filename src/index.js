@@ -23,7 +23,7 @@ export default async config => {
 
   const result = {client, database};
   for (const collection of config.collections) {
-    result[collection] = await getCollection(client, collection);
+    result[collection] = await getCollection(client, config, collection);
   }
 
   return result;

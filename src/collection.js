@@ -14,8 +14,8 @@ const createCollection = (client, config, collection, resolve, reject) => {
 export default (client, config, collection) => new Promise((resolve, reject) => {
   client.readCollection(makeCollectionUrl(config, collection), (err, result) => {
     if (err) {
-      if (err.code === HTTP_STATUS.NOTFOUND) {
-        createCollection(client, collection, resolve, reject);
+      if (err.code === HTTP_STATUS.NOTFOUND && config.createCollectionIfNotExists) {
+        createCollection(client, config, collection, resolve, reject);
         return;
       }
 
