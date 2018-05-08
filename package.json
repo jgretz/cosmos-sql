@@ -1,6 +1,6 @@
 {
   "name": "cosmos-sql",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "cosmos-sql is a wrapper around azure cosmosdb sql. The intent is to provide more syntactic sugar than the default documentdb.",
   "main": "lib/index.js",
   "scripts": {
