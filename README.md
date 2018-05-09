@@ -23,9 +23,7 @@ This package exposese single asynchronous function as the default export. This f
 import cosmosSql from 'cosmos-sql';
 
 const config = { ... };
-const cosmos = await cosmosSql(config);
-
-// now cosmos exposes the database to your needs
+const cosmos = await cosmosSql(config); // cosmos is now the access object described below
 ```
 
 ## Configuration
@@ -61,7 +59,9 @@ Once configured, the function will return an js object with the following struct
   client, // this is the raw documentdb client
   database, // this is the raw documentdb database
 
-  ...collections by name // there will be a property for each collection you named in the array. Each collection object will follow the pattern laid out below.
+  // there will be a property for each collection you named in the array.
+  // Each collection object will follow the pattern laid out below.
+  ...collections by name 
 }
 ```
 
