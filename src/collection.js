@@ -15,7 +15,7 @@ const resolveOrReject = (resolve, reject) => (err, result, handleError) => {
 };
 
 const createCollection = (client, config, collection, resolve, reject) => {
-  client.createCollection(makeDatabaseUrl(config), {id: collection}, {offerThroughput: 400}, resolveOrReject(resolve, reject));
+  client.createCollection(makeDatabaseUrl(config), {id: collection}, {offerThroughput: config.collectionDefaultThroughput}, resolveOrReject(resolve, reject));
 };
 
 const getCollection = (client, config, collection) => new Promise((resolve, reject) => {

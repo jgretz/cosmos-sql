@@ -10,6 +10,8 @@ const DEFAULT_CONFIG = {
 
   createDatabaseIfNotExists: true,
   createCollectionIfNotExists: true,
+
+  collectionDefaultThroughput: 400,
 };
 
 export default async config => {
