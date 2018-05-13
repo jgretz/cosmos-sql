@@ -1,12 +1,7 @@
 import {makeDatabaseUrl, makeCollectionUrl, HTTP_STATUS, makeDocumentUrl} from './util';
 
-const resolveOrReject = (resolve, reject) => (err, result, handleError) => {
+const resolveOrReject = (resolve, reject) => (err, result) => {
   if (err) {
-    if (handleError) {
-      handleError(err);
-      return;
-    }
-
     reject(err);
     return;
   }
@@ -28,7 +23,7 @@ const getCollection = (client, config, collection) => new Promise((resolve, reje
     reject(err);
   };
 
-  client.readCollection(makeCollectionUrl(config, collection), resolveOrReject(resolve, reject, handle404));
+  client.readCollection(makeCollectionUrl(config, collection), resolveOrReject(resolve, handle404));
 });
 
 const getById = (client, config, collection) => id => new Promise((resolve, reject) => {
