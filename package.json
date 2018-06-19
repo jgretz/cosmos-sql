@@ -1,7 +1,7 @@
 {
-  "name": "cosmos-sql",
-  "version": "0.1.1",
-  "description": "cosmos-sql is a wrapper around azure cosmosdb sql. The intent is to provide more syntactic sugar than the default documentdb.",
+  "name": "cosmos-db-sql",
+  "version": "1.0.0",
+  "description": "cosmos-db-sql is a wrapper around azure cosmos db sql. The intent is to provide more syntactic sugar than the default documentdb.",
   "main": "lib/index.js",
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node",
@@ -10,18 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jgretz/node-bits.git"
+    "url": "git+https://github.com/jgretz/cosmos-sql.git"
   },
   "author": "Josh Gretz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jgretz/node-bits/issues"
+    "url": "https://github.com/jgretz/cosmos-sql/issues"
   },
-  "homepage": "https://github.com/jgretz/node-bits#readme",
+  "homepage": "https://github.com/jgretz/cosmos-sql#readme",
   "keywords": [
-    "cosmos-sql",
+    "cosmos-db-sql",
     "cosmosdb",
     "cosmosdb sql",
+    "cosmos-sql",
     "sql"
   ],
   "dependencies": {
